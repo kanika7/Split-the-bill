@@ -1,0 +1,8 @@
+.results-container {
+  list-style-type: none;
+  padding: 0;
+
+  & span {
+    text-transform: capitalize;
+  }
+}

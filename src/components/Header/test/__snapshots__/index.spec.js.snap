@@ -1,0 +1,15 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Header /> Test Suits renders snapshot 1`] = `
+<header
+  className="navbar-fixed-top"
+>
+  <div
+    className="nav-container"
+  >
+    <header>
+      Split The Bill
+    </header>
+  </div>
+</header>
+`;

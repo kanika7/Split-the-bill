@@ -1,0 +1,89 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<ExpenseList /> Test Suits renders snapshot 1`] = `
+<div
+  className="expense-list"
+>
+  <ul
+    className="list-wrap"
+  >
+    <li
+      className="list-item headings"
+    >
+      <span
+        className="col-xs-12 col-lg-2 d-none d-md-block"
+      >
+        S. No.
+      </span>
+      <span
+        className="col-xs-12 col-lg-2"
+      >
+        Who Paid
+      </span>
+      <span
+        className="col-xs-12 col-lg-2"
+      >
+        Amount Paid
+      </span>
+      <span
+        className="col-xs-12 col-lg-2"
+      >
+        Description
+      </span>
+    </li>
+    <li
+      className="list-item"
+      key="0"
+    >
+      <span
+        className="col-xs-12 col-lg-2 d-none d-md-block"
+      >
+        1
+      </span>
+      <span
+        className="col-xs-12 col-lg-2"
+      />
+      <span
+        className="col-xs-12 col-lg-2"
+      >
+        20
+      </span>
+      <span
+        className="col-xs-12 col-lg-2"
+      >
+        test dec
+      </span>
+      <button
+        aria-label="Close"
+        className="close"
+        onClick={[Function]}
+        type="button"
+      >
+        <span
+          aria-hidden="true"
+        >
+          ×
+        </span>
+      </button>
+    </li>
+    <li
+      className="list-item"
+    >
+      <span
+        className="col-xs-12 col-lg-3"
+      >
+        Total Expense
+         : 
+        200
+      </span>
+    </li>
+  </ul>
+  <button
+    className="btn btn-primary action-wrapper btn-primary"
+    onClick={[MockFunction]}
+    type="submit"
+  >
+    Split The Bill
+  </button>
+</div>
+`;

@@ -1,0 +1,8 @@
+@media (min-width: 769px) {
+  .navbar-fixed-top {
+    & .nav-container {
+      width: 75%;
+      max-width: 1440px;
+    }
+  }
+}

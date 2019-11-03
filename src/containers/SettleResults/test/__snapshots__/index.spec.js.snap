@@ -1,0 +1,17 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<SettleResults /> Test Suit renders snapshot 1`] = `
+<ul
+  className="results-container"
+>
+  <li
+    className="list-item"
+  >
+    <span
+      className="col-xs-12 col-lg-4"
+    >
+      Per Head Expense is:  20.00
+    </span>
+  </li>
+</ul>
+`;

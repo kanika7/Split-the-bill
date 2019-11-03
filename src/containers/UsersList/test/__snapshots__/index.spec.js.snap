@@ -1,0 +1,62 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<UsersList /> Test Suits renders snapshot 1`] = `
+<div
+  className="content"
+>
+  <div
+    className="container"
+  >
+    <form
+      className="row"
+      onSubmit={[Function]}
+    >
+      <div
+        className="col-xs-12 col-lg-3"
+      >
+        <input
+          className="form-control"
+          name="name"
+          onChange={[Function]}
+          placeholder="Who Paid"
+          required={true}
+          type="text"
+          value=""
+        />
+      </div>
+      <div
+        className="col-xs-12 col-lg-3"
+      >
+        <input
+          className="form-control"
+          name="amount"
+          onChange={[Function]}
+          placeholder="Amount"
+          required={true}
+          type="number"
+          value=""
+        />
+      </div>
+      <div
+        className="col-xs-12 col-lg-3"
+      >
+        <input
+          className="form-control"
+          name="description"
+          onChange={[Function]}
+          placeholder="Description"
+          type="text"
+          value=""
+        />
+      </div>
+      <button
+        className="btn btn-primary action-wrapper btn-primary"
+        disabled={true}
+        type="submit"
+      >
+        Add Expense
+      </button>
+    </form>
+  </div>
+</div>
+`;

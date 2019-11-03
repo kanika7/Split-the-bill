@@ -1,0 +1,38 @@
+.content {
+  background-color: lightgray;
+  padding: 16px;
+  position: absolute;
+  top: 64px;
+  left: 0px;
+  right: 0px;
+  bottom: 0px;
+  overflow-y: scroll;
+
+  .container {
+    margin-top: 16px;
+    position: relative;
+    padding: 16px;
+    background-color: white;
+    box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.12), 0 4px 4px 0 rgba(0, 0, 0, 0.24);
+
+    .action-wrapper {
+      margin: 15px;
+    }
+
+    .list-wrap {
+      list-style-type: none;
+      padding: 0;
+
+      .list-item {
+        display: flex;
+        border: solid 1px #dcd3d3;
+        padding: 8px;
+      }
+    }
+  }
+  input[type="number"]::-webkit-inner-spin-button,
+  input[type="number"]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+}

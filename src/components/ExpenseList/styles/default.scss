@@ -1,0 +1,19 @@
+.expense-list {
+  margin: 16px auto;
+  padding: 8px 0;
+
+  .headings {
+    color: #696969;
+  }
+
+  .list-wrap {
+    list-style-type: none;
+    padding: 0;
+
+    .list-item {
+      display: flex;
+      border: solid 1px #dcd3d3;
+      padding: 8px;
+    }
+  }
+}
