@@ -10,7 +10,7 @@ exports[`<SettleResults /> Test Suit renders snapshot 1`] = `
     <span
       className="col-xs-12 col-lg-4"
     >
-      Per Head Expense is:  20.00
+      Per Head Expense is:  200.00
     </span>
   </li>
 </ul>

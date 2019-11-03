@@ -21,7 +21,7 @@ class SettleResults extends Component {
   // Calculating average amount for each user.
   calculateAverage = entries => {
     const nameAndAmountSpent = {};
-    let totalAmount = 0;
+    const { totalAmount } = this.props;
     let totalUsers = 0;
     entries.forEach(entry => {
       if (!nameAndAmountSpent[entry.name]) {
@@ -30,7 +30,6 @@ class SettleResults extends Component {
       } else {
         nameAndAmountSpent[entry.name] += entry.amount;
       }
-      totalAmount += entry.amount;
     });
     const perHeadAmount = totalAmount / totalUsers;
     return { nameAndAmountSpent, perHeadAmount };
