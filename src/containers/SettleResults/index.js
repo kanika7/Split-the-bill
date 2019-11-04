@@ -5,7 +5,6 @@ import { OWES, AVG_EXPENSE } from "../../constants";
 import "./styles/index.scss";
 
 class SettleResults extends Component {
-  static debtArr = [];
   constructor(props) {
     super(props);
     this.state = {
@@ -44,31 +43,31 @@ class SettleResults extends Component {
     for (let name in nameAndAmountSpent) {
       nameAndAmountSpent[name] -= perHeadAmount;
     }
-    for (let i in nameAndAmountSpent) {
-      if (nameAndAmountSpent[i] === 0) continue;
+    for (let creditorName in nameAndAmountSpent) {
+      if (nameAndAmountSpent[creditorName] === 0) continue;
       // will only run for users who have to get money back
-      if (nameAndAmountSpent[i] > 0) {
-        for (let j in nameAndAmountSpent) {
+      if (nameAndAmountSpent[creditorName] > 0) {
+        for (let debtorName in nameAndAmountSpent) {
           //will run for users who have to give the money to others
-          if (nameAndAmountSpent[j] < 0) {
-            if (nameAndAmountSpent[i] === -nameAndAmountSpent[j]) {
-              str = `${j} ${OWES} ${i} ${nameAndAmountSpent[i].toFixed(2)}`;
+          if (nameAndAmountSpent[debtorName] < 0) {
+            if (nameAndAmountSpent[creditorName] === -nameAndAmountSpent[debtorName]) {
+              str = `${debtorName} ${OWES} ${creditorName} ${nameAndAmountSpent[creditorName].toFixed(2)}`;
               result.push(str);
-              nameAndAmountSpent[i] = 0;
-              nameAndAmountSpent[j] = 0;
-            } else if (nameAndAmountSpent[i] > -nameAndAmountSpent[j]) {
-              str = `${j} ${OWES} ${i} ${-nameAndAmountSpent[j].toFixed(2)}`;
+              nameAndAmountSpent[creditorName] = 0;
+              nameAndAmountSpent[debtorName] = 0;
+            } else if (nameAndAmountSpent[creditorName] > -nameAndAmountSpent[debtorName]) {
+              str = `${debtorName} ${OWES} ${creditorName} ${-nameAndAmountSpent[debtorName].toFixed(2)}`;
               result.push(str);
-              nameAndAmountSpent[i] -= nameAndAmountSpent[j];
-              nameAndAmountSpent[j] = 0;
+              nameAndAmountSpent[creditorName] -= nameAndAmountSpent[debtorName];
+              nameAndAmountSpent[debtorName] = 0;
             } else {
-              str = `${j} ${OWES} ${i} ${nameAndAmountSpent[i].toFixed(2)}`;
+              str = `${debtorName} ${OWES} ${creditorName} ${nameAndAmountSpent[creditorName].toFixed(2)}`;
               result.push(str);
-              nameAndAmountSpent[j] += nameAndAmountSpent[i];
-              nameAndAmountSpent[i] = 0;
+              nameAndAmountSpent[debtorName] += nameAndAmountSpent[creditorName];
+              nameAndAmountSpent[creditorName] = 0;
             }
           }
-          if (nameAndAmountSpent[i] === 0) break;
+          if (nameAndAmountSpent[creditorName] === 0) break;
         }
       }
     }
